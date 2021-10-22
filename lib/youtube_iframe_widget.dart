@@ -6,6 +6,7 @@ class YoutubeIframeWidget extends StatelessWidget {
   final YoutubePlayerController _controller = YoutubePlayerController(
     initialVideoId: 'K18cpp_-gP8',
     params: const YoutubePlayerParams(
+      autoPlay: true,
       playlist: ['nPt8bK2gbaU', 'gQDByCdjUXw'], // Defining custom playlist
       startAt: Duration(seconds: 30),
       showControls: true,

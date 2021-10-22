@@ -31,16 +31,28 @@ class _HomePageState extends State<HomePage> {
       ),
       width: width,
       height: height,
-      child: AspectRatio(
-        aspectRatio: 16 / 9,
-        child: ClipRRect(
-          borderRadius: const BorderRadius.all(Radius.circular(8.0)),
-          child: Stack(
-            children: [
-              YoutubeIframeWidget(),
-            ],
+      child: Stack(
+        children: [
+          SizedBox(
+            width: width,
+            height: height,
+            child: AspectRatio(
+              aspectRatio: 16 / 9,
+              child: ClipRRect(
+                borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+                child: YoutubeIframeWidget(),
+              ),
+            ),
           ),
-        ),
+          Container(
+            width: width,
+            height: height,
+            decoration: const BoxDecoration(
+              color: Colors.transparent,
+              borderRadius: BorderRadius.all(Radius.circular(8.0)),
+            ),
+          ),
+        ],
       ),
     );
   }
